@@ -8,10 +8,49 @@
     <link rel="stylesheet" href="./styles/index.css" />
   </head>
   <body>
-    <div>
-      <div class="wave"></div>
-      <div class="wave"></div>
-      <div class="wave"></div>
-    </div>
+    <div class="wave"></div>
+    <div class="wave"></div>
+    <div class="wave"></div>
+
+    <!-- TELA DO INÍCIO DO JOGO -->
+    <article id="startScreen">
+      <h1>IronQuiz</h1>
+      <div>
+        <label>Qual é o seu nome?</label>
+        <input
+          type="text"
+          placeholder="Digite aqui o seu nome"
+          id="inputName"
+        />
+        <button id="btnStart">Jogar</button>
+      </div>
+    </article>
+
+    <!-- TELA DO JOGO -->
+    <article id="gameScreen" class="hide">
+      <!-- Section para aperecer nome do jogador e tentativas -->
+      <section id="gameScore">
+        <p>Olá, <span id="name">NomeDoJogador</span>!</p>
+        <p>Você tem <span id="lifes">XXX</span> vidas!</p>
+      </section>
+
+      <!-- Board -->
+      <div id="board">
+        <div id="question"></div>
+        <div class="answerGroup">
+          <button class="answer"></button>
+          <button class="answer"></button>
+          <button class="answer"></button>
+          <button class="answer"></button>
+        </div>
+        <button class="nextQuestion hide">Próxima pergunta</button>
+      </div>
+    </article>
+
+    <!-- LINKANDO OS SCRIPTS  -> js -->
+    <!-- primeiro a classe -->
+    <script src="./scripts/QuizGame.js"></script>
+    <!-- depois o DOM -->
+    <script src="./scripts/index.js"></script>
   </body>
 </html>
